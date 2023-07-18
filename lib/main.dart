@@ -258,26 +258,87 @@ class _MyHomePageState extends State<MyHomePage> {
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
 
-                                    Container(
-                                      decoration: BoxDecoration(
+                                    Stack(
 
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Container(
-                                        width: 100,
-                                        decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(20),
-                                          color: Color(0xFFFF6195),
+                                      children: [
+
+
+                                        Align(
+                                          alignment: Alignment.centerRight,
+                                          child: Container(
+                                            height: 100,
+                                            width: 60,
+                                            decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.circular(2),
+                                              image: DecorationImage(
+                                                image:  AssetImage('images/cloud.jpg'),
+                                                fit: BoxFit.cover,
+                                              ),
+                                            ),
+                                          ),
                                         ),
 
-                                        child: Padding(
+                                        // Positioned(
+                                        //   left: 0,
+                                        //   child: ClipRRect(
+                                        //     borderRadius: BorderRadius.circular(10),
+                                        //     child: Image.asset(
+                                        //       'images/cloud.jpg',    // Replace with your image path
+                                        //       width: 60,             // Set the desired width
+                                        //       height: 100,
+                                        //       fit: BoxFit.cover,
+                                        //       // Set the desired height
+                                        //     ),
+                                        //   ),
+                                        // ),
+                                        //
+                                        // Positioned(
+                                        //   right: 0,
+                                        //   child: ClipRRect(
+                                        //     borderRadius: BorderRadius.circular(10),
+                                        //     child: Image.asset(
+                                        //       'images/cloud.jpg',    // Replace with your image path
+                                        //       width: 60,             // Set the desired width
+                                        //       height: 150,
+                                        //       fit: BoxFit.cover,
+                                        //       // Set the desired height
+                                        //     ),
+                                        //   ),
+                                        // ),
+
+                                        Container(
+                                          height: 100,
+                                          width: 60,
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(2),
+                                            image: DecorationImage(
+                                              image:  AssetImage('images/location_background.jpg'),
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                        ),
+                                        Padding(
                                           padding: const EdgeInsets.all(8.0),
-                                          child: Center(child: Text('Try Now')),
+                                          child: Align(
+                                            alignment: Alignment.bottomCenter,
+                                            child: Container(
+                                              width: 150,
+                                              height: 40,
+                                              decoration: BoxDecoration(
+                                                borderRadius: BorderRadius.circular(20),
+                                                color: Color(0xFFFF6195),
+                                              ),
+
+                                              child: Center(child: Text('Try Now')),
+                                            ),
+                                          ),
                                         ),
-                                      ),
+
+
+                                      ],
                                     ),
+
+
                                   ],
                                 ),
                               )
@@ -364,3 +425,6 @@ class CustomWaveClipper extends CustomClipper<Path>{
   }
 
 }
+
+
+
