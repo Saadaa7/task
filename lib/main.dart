@@ -83,11 +83,11 @@ class _MyHomePageState extends State<MyHomePage> {
                         ],
                       ),
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
 
                          Padding(
-                           padding: const EdgeInsets.only(left: 25, right: 8, top: 8, bottom:8),
+                           padding: const EdgeInsets.only(left: 25, right: 8, bottom:8),
                            child: Row(
                              crossAxisAlignment: CrossAxisAlignment.center,
                              children: [
@@ -96,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                  child: Container(
                                    decoration: BoxDecoration(
                                      borderRadius: BorderRadius.circular(20),
-                                     color: Color(0xFFEB1555),
+                                     color: Color(0xFFFF6195),
                                    ),
 
                                    child: Padding(
@@ -114,7 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                  child: Container(
                                    decoration: BoxDecoration(
                                      borderRadius: BorderRadius.circular(20),
-                                     color: Color(0xFFEB1555),
+                                     color: Color(0xFFFF6195),
                                    ),
 
                                    child: Padding(
@@ -135,7 +135,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: Row(
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.only(left: 12, right: 8, bottom:8),
+                                  padding: const EdgeInsets.only(left: 8,top: 5, right: 8, bottom:8),
                                   child: Row(
                                     children: [
                                       Icon(Icons.remove_red_eye_outlined,
@@ -150,9 +150,68 @@ class _MyHomePageState extends State<MyHomePage> {
 
                                     ],
                                   ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 2,top: 5, right: 8, bottom:8),
+                                  child: Row(
+                                    children: [
+                                      Icon(Icons.favorite_border_rounded,
+                                        color: Colors.white,
+                                        size: 12,),
+                                      SizedBox(width: 5,),
+                                      Text('2.2k',
+                                        style: TextStyle(
+                                          fontSize: 10,
+                                          color: Colors.white,
+                                        ),),
+
+                                    ],
+                                  ),
+                                ),
+
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 2,top: 5, right: 8, bottom:8),
+                                  child: Row(
+                                    children: [
+                                      Icon(Icons.comment,
+                                        color: Colors.white,
+                                        size: 12,),
+                                      SizedBox(width: 5,),
+                                      Text('900',
+                                        style: TextStyle(
+                                          fontSize: 10,
+                                          color: Colors.white,
+                                        ),),
+
+                                    ],
+                                  ),
                                 )
                               ],
                             ),
+                          ),
+                          Column(
+                            children: [
+                              Text('Caption',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                              ),),
+                              SizedBox(height: 10,),
+
+                              Text('Stargazing Duality',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 25,
+                                ),),
+                              SizedBox(height: 10,),
+
+                              Text('Caption',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                ),),
+                              SizedBox(height: 10,),
+                            ],
                           )
                         ],
                       )
@@ -192,16 +251,7 @@ class CustomWaveClipper extends CustomClipper<Path>{
     path.lineTo(0, 0);
     path.close();
 
-    //
-    //  path.lineTo(0, size.height); //starting point
-    // var firstStart = Offset(size.width/2, size.height);
-    // var firstEnd = Offset(size.width/2.25, size.height-70);
-    // path.quadraticBezierTo(firstStart.dx, firstStart.dy, firstEnd.dx, firstEnd.dy);
-    // var secondStart = Offset(size.width/2, size.height-70);
-    // var secondEnd = Offset(size.width/1.6, size.height-30);
-    // path.quadraticBezierTo(secondStart.dx, secondStart.dy, secondEnd.dx, secondEnd.dy);
-    // path.lineTo(size.width, size.height);
-    // path.close();
+  
     return path;
   }
 
