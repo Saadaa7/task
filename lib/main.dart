@@ -12,9 +12,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
      
-      home: const MyHomePage(),
+      home: MyHomePage(),
     );
   }
 }
@@ -40,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Container(
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image:  AssetImage('images/rain.jpg'),
+                      image:  const AssetImage('images/rain.jpg'),
                       fit: BoxFit.cover,
                       colorFilter: ColorFilter.mode(
                           Colors.white.withOpacity(0.8), BlendMode.dstATop),
@@ -68,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           end: Alignment.bottomRight,
                           colors: [
                             Colors.black.withOpacity(0.3),
-                            Color(0xFFFFFFFF).withOpacity(0.05),
+                            const Color(0xFFFFFFFF).withOpacity(0.05),
                           ],
                           stops: [
                             0.1,
@@ -78,8 +78,8 @@ class _MyHomePageState extends State<MyHomePage> {
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,
                         colors: [
-                          Color(0xFFffffff).withOpacity(0.5),
-                          Color((0xFFFFFFFF)).withOpacity(0.5),
+                          const Color(0xFFffffff).withOpacity(0.5),
+                          const Color((0xFFFFFFFF)).withOpacity(0.5),
                         ],
                       ),
                       child: Padding(
@@ -101,11 +101,11 @@ class _MyHomePageState extends State<MyHomePage> {
                                        child: Container(
                                          decoration: BoxDecoration(
                                            borderRadius: BorderRadius.circular(20),
-                                           color: Color(0xFFFF6195),
+                                           color: const Color(0xFFFF6195),
                                          ),
 
-                                         child: Padding(
-                                           padding: const EdgeInsets.all(8.0),
+                                         child: const Padding(
+                                           padding: EdgeInsets.all(8.0),
                                            child: Icon(Icons.favorite_border_outlined,
                                            color: Colors.black,
                                              size: 18,
@@ -119,11 +119,11 @@ class _MyHomePageState extends State<MyHomePage> {
                                        child: Container(
                                          decoration: BoxDecoration(
                                            borderRadius: BorderRadius.circular(20),
-                                           color: Color(0xFFFF6195),
+                                           color: const Color(0xFFFF6195),
                                          ),
 
-                                         child: Padding(
-                                           padding: const EdgeInsets.all(8.0),
+                                         child: const Padding(
+                                           padding: EdgeInsets.all(8.0),
                                            child: Icon(Icons.comment_outlined,
                                              color: Colors.black,
                                              size:18,
@@ -135,12 +135,12 @@ class _MyHomePageState extends State<MyHomePage> {
                                  ),
                                ),
 
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 25, right: 8, bottom:8),
+                                const Padding(
+                                  padding: EdgeInsets.only(left: 25, right: 8, bottom:8),
                                   child: Row(
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsets.only(left: 8,top: 5, right: 8, bottom:8),
+                                        padding: EdgeInsets.only(left: 8,top: 5, right: 8, bottom:8),
                                         child: Row(
                                           children: [
                                             Icon(Icons.remove_red_eye_outlined,
@@ -157,7 +157,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsets.only(left: 2,top: 5, right: 8, bottom:8),
+                                        padding: EdgeInsets.only(left: 2,top: 5, right: 8, bottom:8),
                                         child: Row(
                                           children: [
                                             Icon(Icons.favorite_border_rounded,
@@ -175,7 +175,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                       ),
 
                                       Padding(
-                                        padding: const EdgeInsets.only(left: 2,top: 5, right: 8, bottom:8),
+                                        padding: EdgeInsets.only(left: 2,top: 5, right: 8, bottom:8),
                                         child: Row(
                                           children: [
                                             Icon(Icons.comment,
@@ -205,23 +205,23 @@ class _MyHomePageState extends State<MyHomePage> {
                                         color: Colors.grey[400],
                                         fontSize: 15,
                                       ),),
-                                      SizedBox(height: 10,),
+                                      const SizedBox(height: 10,),
 
-                                      Text('Stargazing \nDuality',
+                                      const Text('Stargazing \nDuality',
                                         style: TextStyle(
                                           color: Colors.white,
                                           fontSize: 22,
                                           fontWeight: FontWeight.bold,
                                         ),),
-                                      SizedBox(height: 10,),
+                                      const SizedBox(height: 10,),
 
                                       Text('Posted by',
                                         style: TextStyle(
                                           color: Colors.grey[400],
                                           fontSize: 15,
                                         ),),
-                                      SizedBox(height: 10,),
-                                      Text('Tyler',
+                                      const SizedBox(height: 10,),
+                                      const Text('Tyler',
                                         style: TextStyle(
                                           color: Colors.white,
                                           fontSize: 20,
@@ -234,32 +234,91 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
 
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.only(left: 30 , top:20, right: 8, bottom: 8),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
 
-                                  Container(
-                                    decoration: BoxDecoration(
+                                  Stack(
 
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Container(
-                                      width: 100,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(20),
-                                        color: Color(0xFFFF6195),
+                                    children: [
+
+
+                                      Align(
+                                        alignment: Alignment.centerRight,
+                                        child: Container(
+                                          height: 100,
+                                          width: 60,
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(2),
+                                            image: const DecorationImage(
+                                              image:  AssetImage('images/cloud.jpg'),
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                        ),
                                       ),
 
-                                      child: Padding(
+                                      // Positioned(
+                                      //   left: 0,
+                                      //   child: ClipRRect(
+                                      //     borderRadius: BorderRadius.circular(10),
+                                      //     child: Image.asset(
+                                      //       'images/cloud.jpg',    // Replace with your image path
+                                      //       width: 60,             // Set the desired width
+                                      //       height: 100,
+                                      //       fit: BoxFit.cover,
+                                      //       // Set the desired height
+                                      //     ),
+                                      //   ),
+                                      // ),
+                                      //
+                                      // Positioned(
+                                      //   right: 0,
+                                      //   child: ClipRRect(
+                                      //     borderRadius: BorderRadius.circular(10),
+                                      //     child: Image.asset(
+                                      //       'images/cloud.jpg',    // Replace with your image path
+                                      //       width: 60,             // Set the desired width
+                                      //       height: 150,
+                                      //       fit: BoxFit.cover,
+                                      //       // Set the desired height
+                                      //     ),
+                                      //   ),
+                                      // ),
+
+                                      Container(
+                                        height: 100,
+                                        width: 60,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(2),
+                                          image: const DecorationImage(
+                                            image:  AssetImage('images/location_background.jpg'),
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                      ),
+                                      Padding(
                                         padding: const EdgeInsets.all(8.0),
-                                        child: Center(child: Text('Try Now')),
+                                        child: Align(
+                                          alignment: Alignment.bottomCenter,
+                                          child: Container(
+                                            width: 150,
+                                            height: 40,
+                                            decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.circular(20),
+                                              color: const Color(0xFFFF6195),
+                                            ),
+
+                                            child: const Center(child: Text('Try Now')),
+                                          ),
+                                        ),
                                       ),
-                                    ),
-                                  ),
+
+
+                                    ],
+                                  )
                                 ],
                               ),
                             )
