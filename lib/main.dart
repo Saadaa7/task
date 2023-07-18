@@ -86,44 +86,74 @@ class _MyHomePageState extends State<MyHomePage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
 
-                         Row(
-                           crossAxisAlignment: CrossAxisAlignment.center,
-                           children: [
-                             Padding(
-                               padding: const EdgeInsets.only(left: 25, right: 8, top: 8, bottom:8),
-                               child: Container(
-                                 decoration: BoxDecoration(
-                                   borderRadius: BorderRadius.circular(20),
-                                   color: Color(0xFFEB1555),
-                                 ),
-
-                                 child: Padding(
-                                   padding: const EdgeInsets.all(8.0),
-                                   child: Icon(Icons.favorite_border_outlined,
-                                   color: Colors.black,
+                         Padding(
+                           padding: const EdgeInsets.only(left: 25, right: 8, top: 8, bottom:8),
+                           child: Row(
+                             crossAxisAlignment: CrossAxisAlignment.center,
+                             children: [
+                               Padding(
+                                 padding: const EdgeInsets.only(left: 8, right: 8, top: 8, bottom:8),
+                                 child: Container(
+                                   decoration: BoxDecoration(
+                                     borderRadius: BorderRadius.circular(20),
+                                     color: Color(0xFFEB1555),
                                    ),
-                                 ),
-                               ),
-                             ),
 
-                             Padding(
-                               padding: const EdgeInsets.all(8.0),
-                               child: Container(
-                                 decoration: BoxDecoration(
-                                   borderRadius: BorderRadius.circular(20),
-                                   color: Color(0xFFEB1555),
-                                 ),
-
-                                 child: Padding(
-                                   padding: const EdgeInsets.all(8.0),
-                                   child: Icon(Icons.comment_outlined,
+                                   child: Padding(
+                                     padding: const EdgeInsets.all(8.0),
+                                     child: Icon(Icons.favorite_border_outlined,
                                      color: Colors.black,
+                                       size: 18,
+                                     ),
                                    ),
                                  ),
                                ),
-                             ),
-                           ],
-                         )
+
+                               Padding(
+                                 padding: const EdgeInsets.all(8.0),
+                                 child: Container(
+                                   decoration: BoxDecoration(
+                                     borderRadius: BorderRadius.circular(20),
+                                     color: Color(0xFFEB1555),
+                                   ),
+
+                                   child: Padding(
+                                     padding: const EdgeInsets.all(8.0),
+                                     child: Icon(Icons.comment_outlined,
+                                       color: Colors.black,
+                                       size:18,
+                                     ),
+                                   ),
+                                 ),
+                               ),
+                             ],
+                           ),
+                         ),
+
+                          Padding(
+                            padding: const EdgeInsets.only(left: 25, right: 8, bottom:8),
+                            child: Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 12, right: 8, bottom:8),
+                                  child: Row(
+                                    children: [
+                                      Icon(Icons.remove_red_eye_outlined,
+                                      color: Colors.white,
+                                      size: 12,),
+                                      SizedBox(width: 5,),
+                                      Text('2.2k',
+                                      style: TextStyle(
+                                        fontSize: 10,
+                                        color: Colors.white,
+                                      ),),
+
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          )
                         ],
                       )
                     ),
