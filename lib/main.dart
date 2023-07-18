@@ -82,138 +82,189 @@ class _MyHomePageState extends State<MyHomePage> {
                           Color((0xFFFFFFFF)).withOpacity(0.5),
                         ],
                       ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-
-                         Padding(
-                           padding: const EdgeInsets.only(left: 25, right: 8, bottom:8),
-                           child: Row(
-                             crossAxisAlignment: CrossAxisAlignment.center,
-                             children: [
-                               Padding(
-                                 padding: const EdgeInsets.only(left: 8, right: 8, top: 8, bottom:8),
-                                 child: Container(
-                                   decoration: BoxDecoration(
-                                     borderRadius: BorderRadius.circular(20),
-                                     color: Color(0xFFFF6195),
-                                   ),
-
-                                   child: Padding(
-                                     padding: const EdgeInsets.all(8.0),
-                                     child: Icon(Icons.favorite_border_outlined,
-                                     color: Colors.black,
-                                       size: 18,
-                                     ),
-                                   ),
-                                 ),
-                               ),
-
-                               Padding(
-                                 padding: const EdgeInsets.all(8.0),
-                                 child: Container(
-                                   decoration: BoxDecoration(
-                                     borderRadius: BorderRadius.circular(20),
-                                     color: Color(0xFFFF6195),
-                                   ),
-
-                                   child: Padding(
-                                     padding: const EdgeInsets.all(8.0),
-                                     child: Icon(Icons.comment_outlined,
-                                       color: Colors.black,
-                                       size:18,
-                                     ),
-                                   ),
-                                 ),
-                               ),
-                             ],
-                           ),
-                         ),
-
-                          Padding(
-                            padding: const EdgeInsets.only(left: 25, right: 8, bottom:8),
-                            child: Row(
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 20, bottom: 20),
+                        child: Row(
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
+
+                               Padding(
+                                 padding: const EdgeInsets.only(left: 25, right: 8, ),
+                                 child: Row(
+                                   crossAxisAlignment: CrossAxisAlignment.center,
+                                   children: [
+                                     Padding(
+                                       padding: const EdgeInsets.only(left: 8, right: 8, top: 8,),
+                                       child: Container(
+                                         decoration: BoxDecoration(
+                                           borderRadius: BorderRadius.circular(20),
+                                           color: Color(0xFFFF6195),
+                                         ),
+
+                                         child: Padding(
+                                           padding: const EdgeInsets.all(8.0),
+                                           child: Icon(Icons.favorite_border_outlined,
+                                           color: Colors.black,
+                                             size: 18,
+                                           ),
+                                         ),
+                                       ),
+                                     ),
+
+                                     Padding(
+                                       padding: const EdgeInsets.only(left: 8, right: 8, top: 8,),
+                                       child: Container(
+                                         decoration: BoxDecoration(
+                                           borderRadius: BorderRadius.circular(20),
+                                           color: Color(0xFFFF6195),
+                                         ),
+
+                                         child: Padding(
+                                           padding: const EdgeInsets.all(8.0),
+                                           child: Icon(Icons.comment_outlined,
+                                             color: Colors.black,
+                                             size:18,
+                                           ),
+                                         ),
+                                       ),
+                                     ),
+                                   ],
+                                 ),
+                               ),
+
                                 Padding(
-                                  padding: const EdgeInsets.only(left: 8,top: 5, right: 8, bottom:8),
+                                  padding: const EdgeInsets.only(left: 25, right: 8, bottom:8),
                                   child: Row(
                                     children: [
-                                      Icon(Icons.remove_red_eye_outlined,
-                                      color: Colors.white,
-                                      size: 12,),
-                                      SizedBox(width: 5,),
-                                      Text('2.2k',
+                                      Padding(
+                                        padding: const EdgeInsets.only(left: 8,top: 5, right: 8, bottom:8),
+                                        child: Row(
+                                          children: [
+                                            Icon(Icons.remove_red_eye_outlined,
+                                            color: Colors.white,
+                                            size: 12,),
+                                            SizedBox(width: 5,),
+                                            Text('2.2k',
+                                            style: TextStyle(
+                                              fontSize: 10,
+                                              color: Colors.white,
+                                            ),),
+
+                                          ],
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(left: 2,top: 5, right: 8, bottom:8),
+                                        child: Row(
+                                          children: [
+                                            Icon(Icons.favorite_border_rounded,
+                                              color: Colors.white,
+                                              size: 12,),
+                                            SizedBox(width: 5,),
+                                            Text('2.2k',
+                                              style: TextStyle(
+                                                fontSize: 10,
+                                                color: Colors.white,
+                                              ),),
+
+                                          ],
+                                        ),
+                                      ),
+
+                                      Padding(
+                                        padding: const EdgeInsets.only(left: 2,top: 5, right: 8, bottom:8),
+                                        child: Row(
+                                          children: [
+                                            Icon(Icons.comment,
+                                              color: Colors.white,
+                                              size: 12,),
+                                            SizedBox(width: 5,),
+                                            Text('900',
+                                              style: TextStyle(
+                                                fontSize: 10,
+                                                color: Colors.white,
+                                              ),),
+
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 25, ),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text('Caption',
                                       style: TextStyle(
-                                        fontSize: 10,
-                                        color: Colors.white,
+                                        color: Colors.grey[400],
+                                        fontSize: 15,
                                       ),),
+                                      SizedBox(height: 10,),
 
-                                    ],
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 2,top: 5, right: 8, bottom:8),
-                                  child: Row(
-                                    children: [
-                                      Icon(Icons.favorite_border_rounded,
-                                        color: Colors.white,
-                                        size: 12,),
-                                      SizedBox(width: 5,),
-                                      Text('2.2k',
+                                      Text('Stargazing \nDuality',
                                         style: TextStyle(
-                                          fontSize: 10,
                                           color: Colors.white,
+                                          fontSize: 22,
+                                          fontWeight: FontWeight.bold,
                                         ),),
+                                      SizedBox(height: 10,),
 
-                                    ],
-                                  ),
-                                ),
-
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 2,top: 5, right: 8, bottom:8),
-                                  child: Row(
-                                    children: [
-                                      Icon(Icons.comment,
-                                        color: Colors.white,
-                                        size: 12,),
-                                      SizedBox(width: 5,),
-                                      Text('900',
+                                      Text('Posted by',
                                         style: TextStyle(
-                                          fontSize: 10,
-                                          color: Colors.white,
+                                          color: Colors.grey[400],
+                                          fontSize: 15,
                                         ),),
-
+                                      SizedBox(height: 10,),
+                                      Text('Tyler',
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold,
+                                        ),),
                                     ],
                                   ),
                                 )
                               ],
                             ),
-                          ),
-                          Column(
-                            children: [
-                              Text('Caption',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20,
-                              ),),
-                              SizedBox(height: 10,),
 
-                              Text('Stargazing Duality',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 25,
-                                ),),
-                              SizedBox(height: 10,),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
 
-                              Text('Caption',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20,
-                                ),),
-                              SizedBox(height: 10,),
-                            ],
-                          )
-                        ],
+                                  Container(
+                                    decoration: BoxDecoration(
+
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Container(
+                                      width: 100,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                        color: Color(0xFFFF6195),
+                                      ),
+
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Center(child: Text('Try Now')),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
                       )
                     ),
                   ),
