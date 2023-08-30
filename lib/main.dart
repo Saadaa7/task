@@ -4,6 +4,7 @@
   import 'package:glassmorphism/glassmorphism.dart';
   import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
   import 'CameraView.dart';
+  import 'package:like_button/like_button.dart';
 
   void main() {
     WidgetsFlutterBinding.ensureInitialized();
@@ -141,7 +142,7 @@
                           ],
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.only(top: 40, bottom: 13, right: 20),
+                          padding: const EdgeInsets.only(top: 40, bottom: 13, right: 18),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -171,13 +172,32 @@
                                                     BorderRadius.circular(20),
                                                 color: const Color(0xFFFF6195),
                                               ),
-                                              child: const Padding(
+                                              child:  Padding(
                                                 padding: EdgeInsets.all(8.0),
-                                                child: Icon(
-                                                  Icons.favorite_border_outlined,
-                                                  color: Colors.black,
+                                                child:
+                                                LikeButton(
                                                   size: 18,
+                                                  circleColor:
+                                                  CircleColor(start: Colors.black26, end: Colors.black),
+                                                  bubblesColor: BubblesColor(
+                                                    dotPrimaryColor: Colors.black,
+                                                    dotSecondaryColor: Colors.black12,
+                                                  ),
+                                                  likeBuilder: (bool isLiked) {
+                                                    return Icon(
+                                                      isLiked ?Icons.favorite : Icons.favorite_border_outlined,
+                                                      color:  Colors.black,
+                                                      size: 18,
+                                                    );
+                                                  },
+                                                  likeCount: 0,
+
                                                 ),
+                                                // Icon(
+                                                //   Icons.favorite_border_outlined,
+                                                //   color: Colors.black,
+                                                //   size: 18,
+                                                // ),
                                               ),
                                             ),
                                           ),
